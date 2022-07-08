@@ -1,0 +1,25 @@
+{% include 'layout.jinja2' %}
+{% block content %}
+	<h1>test</h1>
+	<div class="container">
+    <div class="row gy-4">
+	{% for image in images %}
+<!-- 	<p>{{ image.metadata_storage_path | myb64decode }}</p>
+ -->		
+   	<div class="col-sm">
+            <div class="card h-100">
+  			<img class="card-img-top" src="{{ image.metadata_storage_path | myb64decode }}" alt="Card image cap">
+  			<div class="card-body">
+    			<h5 class="card-title">{{image.imageCaption[0] | find_between}}</h5>
+    				
+    			<a href="{{ image.metadata_storage_path | myb64decode }}" class="btn btn-success mr-1"  download="proposed_file_name">download</a>
+    		
+    			<a href="/delete-photo/{{ image.metadata_storage_name}}" class="btn btn-danger">Delete</a>
+  			</div>
+		</div> 
+	</div>
+ 	{% endfor %}
+ </div>
+	</div>
+
+{% endblock %}
