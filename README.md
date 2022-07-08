@@ -1,5 +1,7 @@
 # frozenfood
 
+## NB :code sur la branche master 
+
 ## 1 Voici le trello qui est en lien avec notre processus de travail
 https://trello.com/invite/b/kwgZ9T0u/af8621d5e00dff8c0571b1db9d772ffe/azure
 
